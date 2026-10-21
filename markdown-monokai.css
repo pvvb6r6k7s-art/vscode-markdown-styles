@@ -1,1 +1,195 @@
 
+/*
+ * Markdown Monokai
+ * Globalny styl podglądu Markdown dla VS Code
+ * Windows / macOS
+ */
+
+:root {
+  --md-bg: #272822;
+  --md-text: #f8f8f2;
+  --md-muted: #b8b8aa;
+  --md-border: #55564b;
+  --md-green: #a6e22e;
+  --md-orange: #fd971f;
+  --md-blue: #66d9ef;
+  --md-yellow: #e6db74;
+}
+
+/* Główny obszar dokumentu */
+
+body {
+  background-color: var(--md-bg) !important;
+  color: var(--md-text) !important;
+  font-family: "Segoe UI", -apple-system,
+    BlinkMacSystemFont, Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.7;
+  padding: 24px 36px;
+  overflow-wrap: break-word;
+}
+
+/* Nagłówki */
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  line-height: 1.35;
+  margin-top: 1.7em;
+  margin-bottom: 0.65em;
+}
+
+h1 {
+  color: var(--md-green);
+  font-size: 2em;
+  border-bottom: 2px solid var(--md-border);
+  padding-bottom: 12px;
+}
+
+h2 {
+  color: var(--md-orange);
+  font-size: 1.55em;
+  border-bottom: 1px solid #49483e;
+  padding-bottom: 8px;
+}
+
+h3 {
+  color: var(--md-blue);
+  font-size: 1.25em;
+}
+
+h4, h5, h6 {
+  color: var(--md-yellow);
+}
+
+/* Tekst i listy */
+
+p {
+  margin: 0.8em 0 1.1em;
+}
+
+li {
+  margin-bottom: 0.3em;
+}
+
+li::marker {
+  color: var(--md-orange);
+}
+
+strong {
+  font-weight: 700;
+}
+
+a {
+  color: var(--md-blue);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Tabele */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+th, td {
+  border: 1px solid var(--md-border);
+  padding: 11px 14px;
+  text-align: left;
+  vertical-align: top;
+}
+
+th {
+  background-color: #3e3d32;
+  color: var(--md-green);
+  font-weight: 700;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #292a24;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #34352d;
+}
+
+tbody tr:hover {
+  background-color: #414237;
+}
+
+/* Kod i fragmenty techniczne */
+
+pre {
+  background-color: #1e1f1c !important;
+  border: 1px solid #49483e;
+  border-radius: 6px;
+  padding: 16px;
+  overflow-x: auto;
+}
+
+code {
+  font-family: Consolas, "SFMono-Regular",
+    Menlo, monospace;
+  font-size: 0.92em;
+}
+
+:not(pre) > code {
+  background-color: #3e3d32;
+  color: var(--md-yellow);
+  padding: 2px 5px;
+  border-radius: 4px;
+}
+
+/* Cytaty i uwagi */
+
+blockquote {
+  border-left: 4px solid var(--md-blue);
+  background-color: #34352d;
+  color: var(--md-text);
+  padding: 12px 18px;
+  margin: 20px 0;
+}
+
+blockquote p {
+  margin: 0.3em 0;
+}
+
+/* Separatory */
+
+hr {
+  border: 0;
+  border-top: 1px solid var(--md-border);
+  margin: 30px 0;
+}
+
+/* Obrazy */
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Przewijanie szerokich tabel */
+
+.markdown-body {
+  overflow-wrap: break-word;
+}
+
+/* Czytelność na węższych ekranach */
+
+@media (max-width: 700px) {
+  body {
+    padding: 16px;
+    font-size: 14px;
+  }
+
+  th, td {
+    padding: 8px;
+  }
+}
